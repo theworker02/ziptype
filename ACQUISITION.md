@@ -1,19 +1,45 @@
 # Acquisition notes — ziptype
 
-## Product
+## Executive summary
 
-`ziptype` is a focused `text` toolkit: Zip and reshape type text streams with deterministic transforms.
+`ziptype` is a focused open-source `text` utility: Zip and reshape type text streams with deterministic transforms.
 
-## Assets
+It is designed as a **portable Node toolkit** with a library API, CLI, tests, and a public documentation site. There is no SaaS dependency and no proprietary runtime.
 
-- Source: `src/index.js`, `src/cli.js`
-- Docs site: `docs/` (GitHub Pages)
-- Tests: `src/index.test.js` (node:test)
+## Product assets
 
-## Integration
+| Asset | Location | Notes |
+| --- | --- | --- |
+| Source | `src/` | Library + CLI + tests |
+| Brand | `docs/logo.svg` | Official logo used in README and Pages |
+| Docs site | `docs/` | GitHub Pages (`/docs` on `main`) |
+| License | `LICENSE` | MIT |
+| Release | `v1.0.0` | First stable tagged release |
+| Funding | `.github/FUNDING.yml` | GitHub Sponsors + thanks.dev |
 
-Zero runtime dependencies. Suitable as a CLI in CI or a small library import in Node 18+.
+## Technical due diligence
 
-## License
+- **Language:** JavaScript (CommonJS), Node.js 18+
+- **Dependencies:** zero runtime dependencies
+- **Network:** none required for core operation
+- **Telemetry:** none
+- **Tests:** `node:test` smoke suite
+- **Distribution:** git clone / GitHub Releases
 
-MIT
+## Commercial / integration posture
+
+Suitable as:
+
+1. A CLI in developer platforms and CI templates
+2. A small library import inside larger Node services
+3. A reference implementation for `text` transforms
+
+## Risks & constraints
+
+- Scope is intentionally narrow; it is not a multi-product suite.
+- Semver major will be required for removing `run(argv)`.
+- GitHub Pages availability depends on public repository settings.
+
+## Contact
+
+Open a GitHub Discussion/Issue on `https://github.com/theworker02/ziptype` or see [SUPPORT.md](./SUPPORT.md).
